@@ -31,4 +31,20 @@ const team = [
   }
 ]
 
-console.log(team)
+const teamContainer = document.getElementById("team-container");
+
+for(let member of team)
+{
+  teamContainer.innerHTML += `
+    <div class="col mb-5">
+      <div class="card">
+        <img src="assets/img/${member.image}" class="card-img-top">
+        <div class="card-body bg-white text-center">
+          <h3>${member.name}</h3>
+          <p>${member.role}</p>
+        </div>
+      </div>
+    </div>
+  `
+}
+
